@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff;
+  padding: 0 20px; /* Tambahkan padding agar ada ruang pada layar kecil */
+}
+
+.container {
+  position: relative;
+}
+
+.home-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #d35bff;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.form-box {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 320px; /* Ukuran default form box */
+}
+
+.form-box h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #a060f1;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  background: none;
+}
+
+.input-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #aaa;
+  transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #a060f1;
+  font-size: 12px;
+}
+
+.submit-btn {
+  background: linear-gradient(to right, #d35bff, #a060f1);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(to right, #a060f1, #d35bff);
+}
+
+.bottom-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.bottom-links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.bottom-links a:hover {
+  text-decoration: underline;
+}
+
+/* Media queries untuk layar kecil (tablet atau smartphone) */
+@media (max-width: 768px) {
+  .form-box {
+    width: 100%; /* Form box menyesuaikan lebar layar */
+    padding: 30px 20px; /* Kurangi padding pada layar kecil */
+  }
+
+  .home-button {
+    font-size: 12px;
+    padding: 6px 12px; /* Sesuaikan ukuran tombol home */
+  }
+
+  .submit-btn {
+    padding: 10px; /* Kurangi padding pada tombol */
+  }
+
+  .form-box h2 {
+    font-size: 20px; /* Sesuaikan ukuran teks header */
+  }
+}
+
+/* Media queries untuk layar sangat kecil (smartphone) */
+@media (max-width: 480px) {
+  .form-box {
+    padding: 20px 15px;
+  }
+
+  .home-button {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  .form-box h2 {
+    font-size: 18px;
+  }
+
+  .submit-btn {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .bottom-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bottom-links a {
+    margin-bottom: 10px; /* Tambah jarak antar link di bawah */
+  }
+}

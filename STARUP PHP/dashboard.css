@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  background-color: #f0f0f0;
+  padding: 20px;
+  width: 250px;
+}
+
+.sidebar h1 {
+  font-size: 24px;
+  color: purple;
+  margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.content {
+  flex: 1;
+  background: linear-gradient(to bottom, #f0aaff, #ff99ff);
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.graphs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.graph {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.graph h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.graph img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Gaya tambahan untuk tabel */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f0aaff;
+  color: #fff;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
