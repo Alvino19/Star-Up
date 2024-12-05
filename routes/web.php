@@ -15,6 +15,8 @@ Route::get('/keperluan/tambah',[KeperluanController::class,'tambahKeperluan']);
 Route::post('postKeperluan',[KeperluanController::class,'postKeperluan']);
 Route::post('postKeuangan',[KeuanganController::class,'postKeuangan']);
 Route::get('/delete/{id}',[KeuanganController::class,'delete']);
+Route::get('/cetak',[KeuanganController::class,'cetak']);
+
 
 
 

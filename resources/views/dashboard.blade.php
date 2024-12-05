@@ -27,14 +27,16 @@
       <div class="graphs">
         <div class="graph">
           <h2>Laporan Keuangan</h2>
+          <h2>{{$laporan}}</h2>
           
         </div>
         <div class="graph">
           <h2>Keperluan</h2>
+          <h2>9</h2>
         
         </div>
       </div>
-      <a href="cetak.php">
+      <a href="/cetak">
         <button>Cetak</button>
       </a>
       <table>
@@ -47,16 +49,17 @@
                         <th>Aksi</th>                        
                     </tr>
                 </thead>
-                <tbody>
                @foreach($keuangan as $k)
+                <tbody>
                <td>{{$k->jumlah_uang}}</td>
                <td>{{$k->keperluan->keperluan}}</td>
                <td>{{$k->tanggal}}</td>
                <td><a href="delete/{{$k->id}}">
                 <button>Delete</button>
                </a></td>
-               @endforeach
                 </tbody>
+               @endforeach
+
             </table>
     </main>
   </div>
